@@ -29,56 +29,56 @@ const Index = () => {
     setUploadedDocs(prev => ({ ...prev, [docType]: file }));
     if (file) {
       toast({
-        title: 'Документ загружен',
-        description: `${file.name} успешно добавлен`,
+        title: 'Document uploaded',
+        description: `${file.name} successfully added`,
       });
     }
   };
 
   const programs = [
     {
-      title: 'Европейские столицы',
-      duration: '14 дней',
-      price: '89 000 ₽',
-      description: 'Посещение Парижа, Берлина, Праги с образовательной программой',
+      title: 'European Capitals',
+      duration: '14 days',
+      price: '$1,200',
+      description: 'Visit Paris, Berlin, Prague with educational program',
       image: 'https://cdn.poehali.dev/projects/a5b6483e-84dc-45f3-8f74-ac01941e04be/files/71d3a957-e18d-47f7-8940-6a100a57403c.jpg',
-      features: ['Лекции', 'Экскурсии', 'Проживание', 'Питание'],
+      features: ['Lectures', 'Excursions', 'Accommodation', 'Meals'],
     },
     {
-      title: 'Летняя школа в Оксфорде',
-      duration: '21 день',
-      price: '145 000 ₽',
-      description: 'Интенсивное обучение в одном из лучших университетов мира',
+      title: 'Oxford Summer School',
+      duration: '21 days',
+      price: '$2,000',
+      description: 'Intensive learning at one of the world\'s best universities',
       image: 'https://cdn.poehali.dev/projects/a5b6483e-84dc-45f3-8f74-ac01941e04be/files/3fa02154-f5d5-4bed-b629-3d6d0db2eeda.jpg',
-      features: ['Курсы', 'Сертификат', 'Проживание', 'Менторство'],
+      features: ['Courses', 'Certificate', 'Accommodation', 'Mentorship'],
     },
     {
-      title: 'Культурный обмен в Испании',
-      duration: '10 дней',
-      price: '65 000 ₽',
-      description: 'Изучение испанского языка и культуры в Барселоне и Мадриде',
+      title: 'Cultural Exchange in Spain',
+      duration: '10 days',
+      price: '$900',
+      description: 'Study Spanish language and culture in Barcelona and Madrid',
       image: 'https://cdn.poehali.dev/projects/a5b6483e-84dc-45f3-8f74-ac01941e04be/files/7ab14690-2f1c-4e79-bee2-cc9899d8d5e2.jpg',
-      features: ['Языковые курсы', 'Экскурсии', 'Проживание', 'Активности'],
+      features: ['Language Courses', 'Excursions', 'Accommodation', 'Activities'],
     },
   ];
 
   const testimonials = [
     {
-      name: 'Анна Соколова',
-      university: 'МГУ, 3 курс',
-      text: 'Поездка в Оксфорд полностью изменила мое представление об образовании. Невероятный опыт!',
+      name: 'Anna Sokolova',
+      university: 'MSU, 3rd year',
+      text: 'The Oxford trip completely changed my perspective on education. Amazing experience!',
       rating: 5,
     },
     {
-      name: 'Дмитрий Петров',
-      university: 'СПбГУ, 2 курс',
-      text: 'Отлично организованная программа, все продумано до мелочей. Обязательно поеду еще раз.',
+      name: 'Dmitry Petrov',
+      university: 'SPbSU, 2nd year',
+      text: 'Perfectly organized program, everything thought through. Will definitely go again.',
       rating: 5,
     },
     {
-      name: 'Мария Иванова',
-      university: 'ВШЭ, 4 курс',
-      text: 'Trip Together помогли с визой и всеми документами. Очень благодарна за поддержку!',
+      name: 'Maria Ivanova',
+      university: 'HSE, 4th year',
+      text: 'Trip Together helped with visa and all documents. Very grateful for the support!',
       rating: 5,
     },
   ];
@@ -104,13 +104,13 @@ const Index = () => {
                     activeSection === section ? 'text-primary' : 'text-foreground/60'
                   }`}
                 >
-                  {section === 'home' && 'Главная'}
-                  {section === 'programs' && 'Программы'}
-                  {section === 'gallery' && 'Галерея'}
-                  {section === 'testimonials' && 'Отзывы'}
-                  {section === 'about' && 'О нас'}
-                  {section === 'documents' && 'Документы'}
-                  {section === 'contact' && 'Контакты'}
+                  {section === 'home' && 'Home'}
+                  {section === 'programs' && 'Programs'}
+                  {section === 'gallery' && 'Gallery'}
+                  {section === 'testimonials' && 'Testimonials'}
+                  {section === 'about' && 'About'}
+                  {section === 'documents' && 'Documents'}
+                  {section === 'contact' && 'Contact'}
                 </button>
               ))}
             </div>
@@ -121,15 +121,15 @@ const Index = () => {
       <section id="home" className="pt-32 pb-20 px-4 animate-fade-in">
         <div className="container mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            Образовательные поездки
+            Educational Travel
             <br />
-            для студентов
+            for Students
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Откройте мир новых знаний и впечатлений. Организуем учебные поездки с полным сопровождением
+            Discover a world of new knowledge and experiences. We organize educational trips with full support
           </p>
           <Button onClick={() => scrollToSection('programs')} size="lg" className="text-lg px-8">
-            Выбрать программу
+            Choose Program
             <Icon name="ArrowRight" size={20} className="ml-2" />
           </Button>
         </div>
@@ -137,9 +137,9 @@ const Index = () => {
 
       <section id="programs" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4">Наши программы</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">Our Programs</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Тщательно разработанные образовательные маршруты с проверенными партнерами
+            Carefully designed educational routes with trusted partners
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {programs.map((program, index) => (
@@ -163,7 +163,7 @@ const Index = () => {
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-primary">{program.price}</span>
                     <Button onClick={() => scrollToSection('contact')}>
-                      Узнать больше
+                      Learn More
                     </Button>
                   </div>
                 </CardContent>
@@ -175,9 +175,9 @@ const Index = () => {
 
       <section id="gallery" className="py-20 px-4">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4">Галерея</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">Gallery</h2>
           <p className="text-center text-muted-foreground mb-12">
-            Моменты из наших путешествий
+            Moments from our journeys
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             {gallery.map((image, index) => (
@@ -191,24 +191,24 @@ const Index = () => {
 
       <section id="testimonials" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4">Отзывы студентов</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">Student Testimonials</h2>
           <p className="text-center text-muted-foreground mb-12">
-            Что говорят наши участники
+            What our participants say
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="animate-scale-in">
                 <CardHeader>
-                  <div className="flex items-center gap-1 mb-2">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" size={16} className="text-yellow-500 fill-yellow-500" />
-                    ))}
-                  </div>
                   <CardTitle className="text-lg">{testimonial.name}</CardTitle>
                   <CardDescription>{testimonial.university}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{testimonial.text}</p>
+                  <p className="text-sm text-muted-foreground mb-4">{testimonial.text}</p>
+                  <div className="flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Icon key={i} name="Star" size={16} className="fill-primary text-primary" />
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -217,182 +217,138 @@ const Index = () => {
       </section>
 
       <section id="about" className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-8">О нас</h2>
-          <Card>
-            <CardContent className="pt-6">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <div className="flex items-start gap-3 mb-6">
-                    <Icon name="Users" size={24} className="text-primary mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Опытная команда</h3>
-                      <p className="text-muted-foreground">
-                        Более 7 лет организуем образовательные поездки для студентов
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Shield" size={24} className="text-primary mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Безопасность</h3>
-                      <p className="text-muted-foreground">
-                        Полное страхование и сопровождение на всех этапах путешествия
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex items-start gap-3 mb-6">
-                    <Icon name="GraduationCap" size={24} className="text-primary mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Образование</h3>
-                      <p className="text-muted-foreground">
-                        Партнерство с ведущими университетами Европы и мира
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Award" size={24} className="text-primary mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Качество</h3>
-                      <p className="text-muted-foreground">
-                        Сертифицированные программы с официальными дипломами
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-4">About Us</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Trip Together has been organizing educational trips for students since 2015
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center animate-fade-in">
+              <CardHeader>
+                <Icon name="Users" size={48} className="mx-auto mb-4 text-primary" />
+                <CardTitle>500+ Students</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Students from all over the country trust our programs
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="text-center animate-fade-in">
+              <CardHeader>
+                <Icon name="Globe" size={48} className="mx-auto mb-4 text-primary" />
+                <CardTitle>15 Countries</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Educational routes across Europe and beyond
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="text-center animate-fade-in">
+              <CardHeader>
+                <Icon name="Shield" size={48} className="mx-auto mb-4 text-primary" />
+                <CardTitle>Full Support</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Assistance with documents, visa, and 24/7 support
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
       <section id="documents" className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-4">Загрузка документов</h2>
+        <div className="container mx-auto max-w-2xl">
+          <h2 className="text-4xl font-bold text-center mb-4">Upload Documents</h2>
           <p className="text-center text-muted-foreground mb-12">
-            Загрузите необходимые документы для оформления поездки
+            Upload the necessary documents for your trip
           </p>
-          <Card>
-            <CardContent className="pt-6">
-              <div className="space-y-6">
-                {[
-                  { type: 'passport', label: 'Паспорт', icon: 'FileText' },
-                  { type: 'visa', label: 'Виза (если есть)', icon: 'Stamp' },
-                  { type: 'insurance', label: 'Страховка', icon: 'ShieldCheck' },
-                ].map((doc) => (
-                  <div key={doc.type} className="space-y-2">
-                    <Label htmlFor={doc.type} className="flex items-center gap-2">
-                      <Icon name={doc.icon as any} size={18} className="text-primary" />
-                      {doc.label}
-                    </Label>
-                    <div className="flex items-center gap-3">
-                      <Input
-                        id={doc.type}
-                        type="file"
-                        accept=".pdf,.jpg,.jpeg,.png"
-                        onChange={(e) => handleFileUpload(doc.type, e.target.files?.[0] || null)}
-                        className="flex-1"
-                      />
-                      {uploadedDocs[doc.type] && (
-                        <Badge variant="secondary" className="flex items-center gap-1">
-                          <Icon name="Check" size={14} />
-                          Загружено
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-                ))}
-                <Button className="w-full mt-4" size="lg">
-                  <Icon name="Upload" size={18} className="mr-2" />
-                  Отправить документы
-                </Button>
-              </div>
+          <Card className="animate-fade-in">
+            <CardHeader>
+              <CardTitle>Required Documents</CardTitle>
+              <CardDescription>Upload copies of your documents</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {[
+                { id: 'passport', label: 'Passport', icon: 'FileText' },
+                { id: 'visa', label: 'Visa', icon: 'FileCheck' },
+                { id: 'insurance', label: 'Insurance', icon: 'ShieldCheck' },
+              ].map((doc) => (
+                <div key={doc.id} className="space-y-2">
+                  <Label htmlFor={doc.id} className="flex items-center gap-2">
+                    <Icon name={doc.icon as any} size={20} className="text-primary" />
+                    {doc.label}
+                  </Label>
+                  <Input
+                    id={doc.id}
+                    type="file"
+                    onChange={(e) => handleFileUpload(doc.id, e.target.files?.[0] || null)}
+                    accept=".pdf,.jpg,.jpeg,.png"
+                  />
+                  {uploadedDocs[doc.id] && (
+                    <p className="text-sm text-primary flex items-center gap-2">
+                      <Icon name="CheckCircle" size={16} />
+                      {uploadedDocs[doc.id]?.name}
+                    </p>
+                  )}
+                </div>
+              ))}
             </CardContent>
           </Card>
         </div>
       </section>
 
       <section id="contact" className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Свяжитесь с нами</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>Отправить заявку</CardTitle>
-                <CardDescription>Мы ответим в течение 24 часов</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Имя</Label>
-                    <Input id="name" placeholder="Ваше имя" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Телефон</Label>
-                    <Input id="phone" type="tel" placeholder="+7 (999) 123-45-67" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Сообщение</Label>
-                    <Textarea id="message" placeholder="Расскажите о своих пожеланиях" rows={4} />
-                  </div>
-                  <Button type="submit" className="w-full">
-                    <Icon name="Send" size={18} className="mr-2" />
-                    Отправить
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            <div className="space-y-6">
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-3">
-                    <Icon name="MapPin" size={24} className="text-primary mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-1">Адрес</h3>
-                      <p className="text-muted-foreground">Москва, ул. Тверская, 15</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-3">
-                    <Icon name="Phone" size={24} className="text-primary mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-1">Телефон</h3>
-                      <p className="text-muted-foreground">+7 (495) 123-45-67</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-3">
-                    <Icon name="Mail" size={24} className="text-primary mt-1" />
-                    <div>
-                      <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-muted-foreground">info@triptogether.ru</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+        <div className="container mx-auto max-w-2xl">
+          <h2 className="text-4xl font-bold text-center mb-4">Contact Us</h2>
+          <p className="text-center text-muted-foreground mb-12">
+            Have questions? We're here to help
+          </p>
+          <Card className="animate-fade-in">
+            <CardContent className="pt-6">
+              <form className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Name</Label>
+                  <Input id="name" placeholder="Your name" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email" type="email" placeholder="your@email.com" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea id="message" placeholder="Your question..." rows={5} />
+                </div>
+                <Button type="submit" className="w-full">
+                  Send Message
+                  <Icon name="Send" size={16} className="ml-2" />
+                </Button>
+              </form>
+              <div className="mt-8 pt-8 border-t space-y-3">
+                <div className="flex items-center gap-3 text-sm">
+                  <Icon name="Mail" size={20} className="text-primary" />
+                  <span>info@triptogether.com</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <Icon name="Phone" size={20} className="text-primary" />
+                  <span>+7 (495) 123-45-67</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <Icon name="MapPin" size={20} className="text-primary" />
+                  <span>Moscow, Tverskaya St., 10</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      <footer className="bg-secondary text-secondary-foreground py-8 px-4">
-        <div className="container mx-auto text-center">
-          <p className="text-sm">© 2024 Trip Together. Все права защищены.</p>
+      <footer className="bg-muted/50 py-8 px-4 mt-20">
+        <div className="container mx-auto text-center text-sm text-muted-foreground">
+          <p>© 2024 Trip Together. All rights reserved.</p>
         </div>
       </footer>
     </div>
