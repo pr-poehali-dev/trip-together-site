@@ -1,0 +1,22 @@
+{
+  "tests": [
+    {
+      "name": "Upload document - POST request",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "user_name": "Иван Иванов",
+        "user_email": "ivan@example.com",
+        "user_phone": "+79991234567",
+        "document_type": "passport",
+        "file_name": "passport.pdf",
+        "file_data": "base64encodeddata"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
