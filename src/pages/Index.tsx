@@ -60,6 +60,14 @@ const Index = () => {
       image: 'https://cdn.poehali.dev/projects/a5b6483e-84dc-45f3-8f74-ac01941e04be/files/7ab14690-2f1c-4e79-bee2-cc9899d8d5e2.jpg',
       features: ['Language Courses', 'Excursions', 'Accommodation', 'Activities'],
     },
+    {
+      title: 'Canadian Adventure',
+      duration: '18 days',
+      price: '$3,400 CAD',
+      description: 'Explore Canadian universities and natural wonders in Toronto and Vancouver',
+      image: 'https://cdn.poehali.dev/projects/a5b6483e-84dc-45f3-8f74-ac01941e04be/files/9dedddfa-aa4c-4f49-b1cd-610c0e175011.jpg',
+      features: ['University Tours', 'Nature Trips', 'Accommodation', 'Activities'],
+    },
   ];
 
   const testimonials = [
